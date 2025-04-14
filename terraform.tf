@@ -8,6 +8,9 @@ terraform {
     azurerm = {
       source  = "hashicorp/azurerm"
       version = ">= 3.116.0, < 5.0.0"
+      configuration_aliases = [
+        azurerm.shared
+      ]
     }
     modtm = {
       source  = "Azure/modtm"
@@ -19,5 +22,3 @@ terraform {
     }
   }
 }
-
-
